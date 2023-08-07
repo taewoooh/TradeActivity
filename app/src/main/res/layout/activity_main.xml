@@ -337,7 +337,8 @@
                     android:id="@+id/l1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/pricecoment">
+                    android:layout_below="@+id/pricecoment"
+                    android:visibility="gone">
 
                     <RelativeLayout
                         android:layout_width="150dp"
@@ -511,7 +512,8 @@
                     android:id="@+id/l3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/l2">
+                    android:layout_below="@+id/l2"
+                    android:visibility="gone">
 
                     <RelativeLayout
                         android:layout_width="150dp"
@@ -533,13 +535,13 @@
                                 android:layout_gravity="center_horizontal|center_vertical">
 
                                 <TextView
-                                    android:id="@+id/hightrade1"
+                                    android:id="@+id/hightrade3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
 
 
-                                    android:textColor="@android:color/black"
+                                    android:textColor="@color/w_btn"
                                     android:textSize="20dp"
 
 
@@ -549,10 +551,10 @@
                                 </TextView>
 
                                 <TextView
-                                    android:id="@+id/hightradeyear1"
+                                    android:id="@+id/hightradeyear3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/hightrade1"
+                                    android:layout_below="@+id/hightrade3"
                                     android:layout_centerHorizontal="true"
 
                                     android:textColor="@android:color/darker_gray"
@@ -588,13 +590,13 @@
                                 android:layout_gravity="center_horizontal|center_vertical">
 
                                 <TextView
-                                    android:id="@+id/nowtrade1"
+                                    android:id="@+id/nowtrade3"
                                     android:layout_width="wrap_content"
 
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
 
-                                    android:textColor="@android:color/black"
+                                    android:textColor="@color/w_btn"
                                     android:textSize="20dp"
 
 
@@ -605,10 +607,10 @@
 
 
                                 <TextView
-                                    android:id="@+id/nowtradeyear1"
+                                    android:id="@+id/nowtradeyear3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/nowtrade"
+                                    android:layout_below="@+id/nowtrade3"
                                     android:layout_centerHorizontal="true"
 
                                     android:textColor="@android:color/darker_gray"
@@ -643,13 +645,13 @@
                                 android:layout_gravity="center_horizontal|center_vertical">
 
                                 <TextView
-                                    android:id="@+id/rowtrade1"
+                                    android:id="@+id/rowtrade3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
 
 
-                                    android:textColor="@android:color/black"
+                                    android:textColor="@color/w_btn"
                                     android:textSize="20dp"
 
 
@@ -659,10 +661,10 @@
                                 </TextView>
 
                                 <TextView
-                                    android:id="@+id/rowtradeyear1"
+                                    android:id="@+id/rowtradeyear3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/rowtrade1"
+                                    android:layout_below="@+id/rowtrade3"
                                     android:layout_centerHorizontal="true"
 
                                     android:textColor="@android:color/darker_gray"
@@ -685,7 +687,8 @@
                     android:id="@+id/l2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/l1">
+                    android:layout_below="@+id/l1"
+                    android:visibility="gone">
 
                     <RelativeLayout
                         android:layout_width="150dp"

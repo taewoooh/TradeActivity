@@ -25,6 +25,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -103,14 +104,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Daydataadapter recyclerViewAdapter;
     CardView b1;
     private int i = 0;
+    TextView nowtrade;
+    TextView nowtradeyear;
     TextView hightrade;
     TextView hightradeyear;
     TextView rowtrade;
     TextView rowtradeyear;
+
+    TextView nowtrade2;
+    TextView nowtradeyear2;
+    TextView hightrade2;
+    TextView hightradeyear2;
+    TextView rowtrade2;
+    TextView rowtradeyear2;
+
+    TextView nowtrade3;
+    TextView nowtradeyear3;
+    TextView hightrade3;
+    TextView hightradeyear3;
+    TextView rowtrade3;
+    TextView rowtradeyear3;
+
     LockableNestedScrollView scrollView;
-    TextView nowtrade;
+
     TextView nowtrade1;
-    TextView nowtradeyear;
+
     Progressdialog progressDialog;
     int t;
     int tx;
@@ -124,6 +142,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     CardView py1;
 
     String minusti;
+    LinearLayout l1, l2, l3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
 
-        jiyeok = new TWPreference(this).getString("지역셋","서울특별시");
+        jiyeok = new TWPreference(this).getString("지역셋", "서울특별시");
 
 
         //   ((MainActivity) this).replaceFragment(new Frag1());
@@ -1000,7 +1019,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void btncheck1() {
-        Log.e("ㅅㅂ매매전세월세", "" + new TWPreference(this).getString("매매전세월세버튼2", "111")+" / "+b_btn+j_btn+m_btn);
+        Log.e("ㅅㅂ매매전세월세", "" + new TWPreference(this).getString("매매전세월세버튼2", "111") + " / " + b_btn + j_btn + m_btn);
         b_btn = 1;
         m_btn = 1;
         j_btn = 1;
@@ -1008,13 +1027,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             j1.performClick();
             g1.performClick();
 
+            l1.setVisibility(View.VISIBLE);
+            l2.setVisibility(View.GONE);
+            l3.setVisibility(View.GONE);
 
         } else if (new TWPreference(this).getString("매매전세월세버튼2", "111").equals("010")) {
             m1.performClick();
             g1.performClick();
+
+            l1.setVisibility(View.GONE);
+            l2.setVisibility(View.VISIBLE);
+            l3.setVisibility(View.GONE);
         } else if (new TWPreference(this).getString("매매전세월세버튼2", "111").equals("001")) {
             m1.performClick();
             j1.performClick();
+
+            l1.setVisibility(View.GONE);
+            l2.setVisibility(View.GONE);
+            l3.setVisibility(View.VISIBLE);
 
         } else if (new TWPreference(this).getString("매매전세월세버튼2", "111").equals("000")) {
 
@@ -1022,17 +1052,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             j1.performClick();
             g1.performClick();
 
+            l1.setVisibility(View.GONE);
+            l2.setVisibility(View.GONE);
+            l3.setVisibility(View.GONE);
         } else if (new TWPreference(this).getString("매매전세월세버튼2", "111").equals("110")) {
             g1.performClick();
 
+            l1.setVisibility(View.VISIBLE);
+            l2.setVisibility(View.VISIBLE);
+            l3.setVisibility(View.GONE);
         } else if (new TWPreference(this).getString("매매전세월세버튼2", "111").equals("101")) {
             j1.performClick();
 
+            l1.setVisibility(View.VISIBLE);
+            l2.setVisibility(View.GONE);
+            l3.setVisibility(View.VISIBLE);
         } else if (new TWPreference(this).getString("매매전세월세버튼2", "111").equals("011")) {
             m1.performClick();
 
+            l1.setVisibility(View.GONE);
+            l2.setVisibility(View.VISIBLE);
+            l3.setVisibility(View.VISIBLE);
         } else if (new TWPreference(this).getString("매매전세월세버튼2", "111").equals("111")) {
 
+
+            l1.setVisibility(View.VISIBLE);
+            l2.setVisibility(View.VISIBLE);
+            l3.setVisibility(View.VISIBLE);
 
         }
 
@@ -1361,6 +1407,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         chartpirce = (TextView) findViewById(R.id.chartpirce);
         chartgunsu = (TextView) findViewById(R.id.chartgusnu);
 
+        l1 = (LinearLayout) findViewById(R.id.l1);
+        l2 = (LinearLayout) findViewById(R.id.l2);
+        l3 = (LinearLayout) findViewById(R.id.l3);
 
         rchartymd = (TextView) findViewById(R.id.rchartymd);
         rchartpirce = (TextView) findViewById(R.id.rchartpirce);
@@ -1394,16 +1443,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         listViewItems = new ArrayList<>();
         title = (TextView) findViewById(R.id.title);
         b1 = (CardView) findViewById(R.id.b1);
+        updatetime = (TextView) findViewById(R.id.updatetime);
+
+
+        nowtrade = (TextView) findViewById(R.id.nowtrade);
+        nowtradeyear = (TextView) findViewById(R.id.nowtradeyear);
         hightrade = (TextView) findViewById(R.id.hightrade);
         hightradeyear = (TextView) findViewById(R.id.hightradeyear);
-        updatetime = (TextView) findViewById(R.id.updatetime);
         rowtrade = (TextView) findViewById(R.id.rowtrade);
         rowtradeyear = (TextView) findViewById(R.id.rowtradeyear);
-        nowtrade = (TextView) findViewById(R.id.nowtrade);
+
+        nowtrade2 = (TextView) findViewById(R.id.nowtrade2);
+        nowtradeyear2 = (TextView) findViewById(R.id.nowtradeyear2);
+        hightrade2 = (TextView) findViewById(R.id.hightrade2);
+        hightradeyear2 = (TextView) findViewById(R.id.hightradeyear2);
+        rowtrade2 = (TextView) findViewById(R.id.rowtrade2);
+        rowtradeyear2 = (TextView) findViewById(R.id.rowtradeyear2);
+
+        nowtrade3 = (TextView) findViewById(R.id.nowtrade3);
+        nowtradeyear3 = (TextView) findViewById(R.id.nowtradeyear3);
+        hightrade3 = (TextView) findViewById(R.id.hightrade3);
+        hightradeyear3 = (TextView) findViewById(R.id.hightradeyear3);
+        rowtrade3 = (TextView) findViewById(R.id.rowtrade3);
+        rowtradeyear3 = (TextView) findViewById(R.id.rowtradeyear3);
 
         py2 = (TextView) findViewById(R.id.py2);
 
-        nowtradeyear = (TextView) findViewById(R.id.nowtradeyear);
+
 
         b1.setOnClickListener(this::onClick);
 
@@ -1485,25 +1551,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     recyclerViewAdapter.notifyDataSetChanged();
 
                 }
-
+                updatetime.setText(listViewItems.get(0).getUpdatetime());
 
                 hightrade.setText(String.valueOf(listViewItems.get(0).getHightrade()));
                 rowtrade.setText(String.valueOf(listViewItems.get(0).getRowtrade()));
                 nowtrade.setText(String.valueOf(listViewItems.get(0).getTrade()));
-
-
-                //  Numcounthandler(hightrade, listViewItems.get(0).getHightrade(), rowtrade, listViewItems.get(0).getRowtrade(),nowtrade,listViewItems.get(0).getTrade());
-
-                updatetime.setText(listViewItems.get(0).getUpdatetime());
-
-                // hightrade.setText(String.valueOf(listViewItems.get(0).getHightrade())+"건");
                 hightradeyear.setText("(" + String.valueOf(listViewItems.get(0).getHighyear()) + "." + String.valueOf(listViewItems.get(0).getHighmonth()) + ")");
-
-                //rowtrade.setText(String.valueOf(listViewItems.get(0).getRowtrade()) + " 건");
                 rowtradeyear.setText("(" + String.valueOf(listViewItems.get(0).getRowyear()) + "." + String.valueOf(listViewItems.get(0).getRowmonth()) + ")");
-
-
                 nowtradeyear.setText("(" + String.valueOf(listViewItems.get(0).getYear()) + "." + String.valueOf(listViewItems.get(0).getMonth()) + ")");
+
+                hightrade2.setText(String.valueOf(listViewItems.get(0).getHightrade()));
+                rowtrade2.setText(String.valueOf(listViewItems.get(0).getRowtrade()));
+                nowtrade2.setText(String.valueOf(listViewItems.get(0).getTrade()));
+                hightradeyear2.setText("(" + String.valueOf(listViewItems.get(0).getHighyear()) + "." + String.valueOf(listViewItems.get(0).getHighmonth()) + ")");
+                rowtradeyear2.setText("(" + String.valueOf(listViewItems.get(0).getRowyear()) + "." + String.valueOf(listViewItems.get(0).getRowmonth()) + ")");
+                nowtradeyear2.setText("(" + String.valueOf(listViewItems.get(0).getYear()) + "." + String.valueOf(listViewItems.get(0).getMonth()) + ")");
+
+
+                hightrade3.setText(String.valueOf(listViewItems.get(0).getHightrade()));
+                rowtrade3.setText(String.valueOf(listViewItems.get(0).getRowtrade()));
+                nowtrade3.setText(String.valueOf(listViewItems.get(0).getTrade()));
+                hightradeyear3.setText("(" + String.valueOf(listViewItems.get(0).getHighyear()) + "." + String.valueOf(listViewItems.get(0).getHighmonth()) + ")");
+                rowtradeyear3.setText("(" + String.valueOf(listViewItems.get(0).getRowyear()) + "." + String.valueOf(listViewItems.get(0).getRowmonth()) + ")");
+                nowtradeyear3.setText("(" + String.valueOf(listViewItems.get(0).getYear()) + "." + String.valueOf(listViewItems.get(0).getMonth()) + ")");
+
                 progressDialog.dismiss();
             }
 
@@ -1736,7 +1807,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Tongsin(jiyeok);
                 DaydataTongsin(jiyeok);
 
-                new TWPreference(MainActivity.this).putString("지역셋",jiyeok);
+                new TWPreference(MainActivity.this).putString("지역셋", jiyeok);
 
             }
         });
@@ -1870,7 +1941,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     BDataSet.setVisible(false);
                     lineChart.invalidate();
-
+                    l1.setVisibility(View.GONE);
                     linechartlayout2.setVisibility(View.GONE);
 
 
@@ -1883,6 +1954,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     // Timelimit();
                     BDataSet.setVisible(true);
                     lineChart.invalidate();
+                    l1.setVisibility(View.VISIBLE);
                     if (infor == 1) {
                         linechartlayout2.setVisibility(View.VISIBLE);
                     }
@@ -1907,6 +1979,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     RDataSet.setVisible(false);
                     lineChart.invalidate();
+                    l2.setVisibility(View.GONE);
                     linechartlayout3.setVisibility(View.GONE);
                     j1.setCardBackgroundColor(getColor(R.color.off_Btcolor));
                     j2.setTextColor(getColor(R.color.Off_Tcolor));
@@ -1920,6 +1993,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     // Timelimit();
                     RDataSet.setVisible(true);
                     lineChart.invalidate();
+                    l2.setVisibility(View.VISIBLE);
                     if (infor == 1) {
                         linechartlayout3.setVisibility(View.VISIBLE);
                     }
@@ -1944,6 +2018,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     MDataSet.setVisible(false);
                     lineChart.invalidate();
+                    l3.setVisibility(View.GONE);
 
                     linechartlayout4.setVisibility(View.GONE);
 
@@ -1957,7 +2032,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     // Timelimit();
                     MDataSet.setVisible(true);
                     lineChart.invalidate();
-
+                    l3.setVisibility(View.VISIBLE);
                     if (infor == 1) {
                         linechartlayout4.setVisibility(View.VISIBLE);
                     }
