@@ -130,7 +130,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        jiyeok = "부산광역시";
+
+        jiyeok = new TWPreference(this).getString("지역셋","서울특별시");
 
 
         //   ((MainActivity) this).replaceFragment(new Frag1());
@@ -1734,6 +1735,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 Tongsin(jiyeok);
                 DaydataTongsin(jiyeok);
+
+                new TWPreference(MainActivity.this).putString("지역셋",jiyeok);
 
             }
         });

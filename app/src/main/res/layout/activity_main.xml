@@ -365,7 +365,7 @@
                                     android:layout_centerHorizontal="true"
 
 
-                                    android:textColor="@android:color/black"
+                                    android:textColor="@color/m_btn"
                                     android:textSize="20dp"
 
 
@@ -420,7 +420,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
 
-                                    android:textColor="@android:color/black"
+                                    android:textColor="@color/m_btn"
                                     android:textSize="20dp"
 
 
@@ -475,7 +475,7 @@
                                     android:layout_centerHorizontal="true"
 
 
-                                    android:textColor="@android:color/black"
+                                    android:textColor="@color/m_btn"
                                     android:textSize="20dp"
 
 
@@ -507,12 +507,358 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/l3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/l2">
 
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|center_vertical">
+
+                                <TextView
+                                    android:id="@+id/hightrade1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+
+
+                                    android:textColor="@android:color/black"
+                                    android:textSize="20dp"
+
+
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/hightradeyear1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/hightrade1"
+                                    android:layout_centerHorizontal="true"
+
+                                    android:textColor="@android:color/darker_gray"
+                                    android:textSize="10dp"
+
+
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|center_vertical">
+
+                                <TextView
+                                    android:id="@+id/nowtrade1"
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+
+                                    android:textColor="@android:color/black"
+                                    android:textSize="20dp"
+
+
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+
+                                <TextView
+                                    android:id="@+id/nowtradeyear1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/nowtrade"
+                                    android:layout_centerHorizontal="true"
+
+                                    android:textColor="@android:color/darker_gray"
+                                    android:textSize="10dp"
+
+
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|center_vertical">
+
+                                <TextView
+                                    android:id="@+id/rowtrade1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+
+
+                                    android:textColor="@android:color/black"
+                                    android:textSize="20dp"
+
+
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/rowtradeyear1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rowtrade1"
+                                    android:layout_centerHorizontal="true"
+
+                                    android:textColor="@android:color/darker_gray"
+                                    android:textSize="10dp"
+
+
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/l1">
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|center_vertical">
+
+                                <TextView
+                                    android:id="@+id/hightrade2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+
+
+                                    android:textColor="@color/j_btn"
+                                    android:textSize="20dp"
+
+
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/hightradeyear2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/hightrade2"
+                                    android:layout_centerHorizontal="true"
+
+                                    android:textColor="@android:color/darker_gray"
+                                    android:textSize="10dp"
+
+
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|center_vertical">
+
+                                <TextView
+                                    android:id="@+id/nowtrade2"
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+
+                                    android:textColor="@color/j_btn"
+                                    android:textSize="20dp"
+
+
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+
+                                <TextView
+                                    android:id="@+id/nowtradeyear2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/nowtrade2"
+                                    android:layout_centerHorizontal="true"
+
+                                    android:textColor="@android:color/darker_gray"
+                                    android:textSize="10dp"
+
+
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|center_vertical">
+
+                                <TextView
+                                    android:id="@+id/rowtrade2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+
+
+                                    android:textColor="@color/j_btn"
+                                    android:textSize="20dp"
+
+
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/rowtradeyear2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rowtrade2"
+                                    android:layout_centerHorizontal="true"
+
+                                    android:textColor="@android:color/darker_gray"
+                                    android:textSize="10dp"
+
+
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                </LinearLayout>
                 <RelativeLayout
                     android:id="@+id/updatetimelayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/l1"
+                    android:layout_below="@+id/l3"
                     android:visibility="visible"
                     android:padding="5dp">
 
