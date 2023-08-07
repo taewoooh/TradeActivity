@@ -561,13 +561,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     int rowyear = contributor.rowyear;
                     int rowmonth = contributor.rowmonth;
                     String updatetime = contributor.updatetime;
-                     minusti =contributor.minus;
-
+                    minusti = contributor.minus;
 
 
                     Log.e("dhxodn88", "" + si + " / " + year + " / " + month + " / " + yearmonth + " ---> "
                             + trade + "(" + per + "%)" + " /  (최고거래건수 : " + highyear + "년 " + highmonth + "월 / " + hightrade + ")"
-                            + " (최저거래건수 : " + rowyear + "년 " + rowmonth + "월 / " + rowtarde + " / 업데이트 시간 : " + updatetime + " / " + ym + ")-->"+minusti);
+                            + " (최저거래건수 : " + rowyear + "년 " + rowmonth + "월 / " + rowtarde + " / 업데이트 시간 : " + updatetime + " / " + ym + ")-->" + minusti);
 
 
                     float y = Float.parseFloat(ym);
@@ -584,7 +583,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 bentries_c = 1;
                 Collections.sort(bentries, new EntryXComparator());
                 entries = bentries;
-                minustime.setText(" "+minusti);
+                minustime.setText(" " + minusti);
                 if (rentries_c == 1 && bentries_c == 1 && mentries_c == 1) {
                     Log.e("통신2", "->");
                     Datasetting1();
@@ -690,7 +689,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
                 }
-
+                //  rentries_c = 0;
 
             }
 
@@ -698,7 +697,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onFailure(Call<List<Daydatalistitem2>> call, Throwable t) {
                 Toast.makeText(MainActivity.this, "정보받아오기 실패 " + t, Toast.LENGTH_LONG)
                         .show();
-
 
 
                 Log.e("onFailure", "- > " + t);
@@ -772,7 +770,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 }
 
-
+                // mentries_c = 0;
             }
 
             @Override
@@ -799,7 +797,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void Buyset() {
 
 
-
         BDataSet = new LineDataSet(bentries, "DataSet 1");
 
         BDataSet.setLineWidth(2);
@@ -814,16 +811,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         BDataSet.setDrawValues(false);
 
 
-
-
-
         lineData.addDataSet(BDataSet);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void Rentset() {
-
-
 
 
         RDataSet = new LineDataSet(rentries, "전세");
@@ -845,8 +837,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void Monthset() {
-
-
 
 
         MDataSet = new LineDataSet(mentries, "월세");
@@ -925,7 +915,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void Datasetting1() {
 
         btnGone();
-lineData.clearValues();
+        lineData.clearValues();
         Buyset();
         Rentset();
         Monthset();
@@ -1009,8 +999,10 @@ lineData.clearValues();
     }
 
     public void btncheck1() {
-        Log.e("ㅅㅂ매매전세월세", "" + new TWPreference(this).getString("매매전세월세버튼2", "111"));
-
+        Log.e("ㅅㅂ매매전세월세", "" + new TWPreference(this).getString("매매전세월세버튼2", "111")+" / "+b_btn+j_btn+m_btn);
+        b_btn = 1;
+        m_btn = 1;
+        j_btn = 1;
         if (new TWPreference(this).getString("매매전세월세버튼2", "111").equals("100")) {
             j1.performClick();
             g1.performClick();
@@ -1261,7 +1253,9 @@ lineData.clearValues();
         lineChart.setDescription(description);
 
         lineChart.invalidate();
-
+        bentries_c = 0;
+        rentries_c = 0;
+        mentries_c = 0;
 
     }
 
@@ -1349,7 +1343,7 @@ lineData.clearValues();
         m2 = (TextView) findViewById(R.id.m2);
         j2 = (TextView) findViewById(R.id.j2);
         g2 = (TextView) findViewById(R.id.w2);
-        minustime =(TextView) findViewById(R.id.minustime);
+        minustime = (TextView) findViewById(R.id.minustime);
 
         Linecharttext1 = (TextView) findViewById(R.id.Linecharttext1);
         Linecharttext2 = (TextView) findViewById(R.id.Linecharttext2);
@@ -1746,6 +1740,7 @@ lineData.clearValues();
         dialog.show();
 
     }
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void SizeCheck3() {
 
@@ -1753,25 +1748,19 @@ lineData.clearValues();
         if (bentries.size() > 0 && rentries.size() == 0 && mentries.size() == 0) {
 
 
-
-                BDataSet.setVisible(false);
-
+            BDataSet.setVisible(false);
 
 
         } else if (bentries.size() == 0 && rentries.size() > 0 && mentries.size() == 0) {
 
 
-
-                RDataSet.setVisible(false);
-
+            RDataSet.setVisible(false);
 
 
         } else if (bentries.size() == 0 && rentries.size() == 0 && mentries.size() > 0) {
 
 
-
-                MDataSet.setVisible(false);
-
+            MDataSet.setVisible(false);
 
 
         } else if (bentries.size() == 0 && rentries.size() == 0 && mentries.size() == 0) {
@@ -1779,46 +1768,40 @@ lineData.clearValues();
         } else if (bentries.size() > 0 && rentries.size() > 0 && mentries.size() == 0) {
 
 
-
-
-                BDataSet.setVisible(false);
-                RDataSet.setVisible(false);
+            BDataSet.setVisible(false);
+            RDataSet.setVisible(false);
 
         } else if (bentries.size() > 0 && rentries.size() == 0 && mentries.size() > 0) {
 
 
-                BDataSet.setVisible(false);
+            BDataSet.setVisible(false);
 
-                MDataSet.setVisible(false);
-
+            MDataSet.setVisible(false);
 
 
         } else if (bentries.size() == 0 && rentries.size() > 0 && mentries.size() > 0) {
 
 
-
-                RDataSet.setVisible(false);
-                MDataSet.setVisible(false);
+            RDataSet.setVisible(false);
+            MDataSet.setVisible(false);
 
         } else if (bentries.size() > 0 && rentries.size() > 0 && mentries.size() > 0) {
 
 
-
-                BDataSet.setVisible(false);
-                RDataSet.setVisible(false);
-                MDataSet.setVisible(false);
+            BDataSet.setVisible(false);
+            RDataSet.setVisible(false);
+            MDataSet.setVisible(false);
 
 
         }
 
 
     }
+
     public void Clear() {
 
         listViewItems.clear();
         recyclerViewAdapter.notifyDataSetChanged();
-
-
 
 
         entries.clear();
@@ -1839,6 +1822,7 @@ lineData.clearValues();
 
 
     }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
