@@ -14,8 +14,8 @@ public interface Atradegithub {
 
     //@GET("/Information2.php")
     // @GET("/ilbyeol.php")
-    @GET("/DatasettestX2.php")
-    // JSON Array를 리턴하므로 List<>가 되었다
-    //Call<List<ListViewItem>> contributors(@Query("name") String naljja);
+    //@GET("/DatasettestX2.php")
+    @GET("/DatasettestX5.php")
+
     Call<List<Daydatalistitem2>> contributors(@Query("jiyeok") String name);
 }
