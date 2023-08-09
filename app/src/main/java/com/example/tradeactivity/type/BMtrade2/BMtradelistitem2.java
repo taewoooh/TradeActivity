@@ -1,5 +1,4 @@
-package com.example.tradeactivity;
-
+package com.example.tradeactivity.type.BMtrade2;
 
 
 import com.google.gson.annotations.Expose;
@@ -10,11 +9,10 @@ import com.google.gson.annotations.SerializedName;
  * Created by taewoo on 2019-11-16.
  */
 
-public class Daydatalistitem2 {
+public class BMtradelistitem2 {
 
-
-    public Daydatalistitem2(String si, int year, int month, int yearmonth, int trade, String per , int hightrade,
-                            int highyear, int highmonth, int rowtrade, int rowyear, int rowmonth, String updatetime, String ym,String minus) {
+    public BMtradelistitem2(String si, int year, int month, int yearmonth, int trade, String per , int hightrade,
+                            int highyear, int highmonth, int rowtrade, int rowyear, int rowmonth, String updatetime) {
 
         this.si = si;
         this.year = year;
@@ -33,7 +31,30 @@ public class Daydatalistitem2 {
         this.rowmonth = rowmonth;
         this.updatetime = updatetime;
         this.ym = ym;
-        this.minus =minus;
+
+
+
+    }
+    public BMtradelistitem2(String si, int year, int month, int yearmonth, int trade, String per , int hightrade,
+                            int highyear, int highmonth, int rowtrade, int rowyear, int rowmonth, String updatetime, String ym) {
+
+        this.si = si;
+        this.year = year;
+        this.month = month;
+        this.yearmonth = yearmonth;
+        this.trade = trade;
+
+        this.per = per;
+
+        this.hightrade = hightrade;
+        this.highyear = highyear;
+        this.highmonth = highmonth;
+
+        this.rowtrade = rowtrade;
+        this.rowyear = rowyear;
+        this.rowmonth = rowmonth;
+        this.updatetime = updatetime;
+        this.ym = ym;
 
 
 
@@ -86,23 +107,8 @@ public class Daydatalistitem2 {
     public
     String ym;
 
-
-    @SerializedName("minus")
-    @Expose
-    public
-    String minus;
-
     public int getHightrade() {
         return hightrade;
-    }
-
-
-    public String getMinus() {
-        return minus;
-    }
-
-    public void setMinus(String minus) {
-        this.minus = minus;
     }
 
     public void setHightrade(int hightrade) {

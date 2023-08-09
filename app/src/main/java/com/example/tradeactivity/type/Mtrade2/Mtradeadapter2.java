@@ -1,4 +1,4 @@
-package com.example.tradeactivity;
+package com.example.tradeactivity.type.Mtrade2;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -13,15 +13,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tradeactivity.R;
+import com.example.tradeactivity.Util;
+
 import java.util.ArrayList;
 
-public class Daydataadapter extends RecyclerView.Adapter<Daydataadapter.ViewHolder> {
+public class Mtradeadapter2 extends RecyclerView.Adapter<Mtradeadapter2.ViewHolder> {
 
     Context context;
-    Daydatalistitem item2 = null;
-    private ArrayList<Daydatalistitem> listviewitem;
+    Mtradelistitem2 item2 = null;
+    private ArrayList<Mtradelistitem2> listviewitem;
 
-    public Daydataadapter(Context context, ArrayList<Daydatalistitem> listviewitem) {
+    public Mtradeadapter2(Context context, ArrayList<Mtradelistitem2> listviewitem) {
         this.listviewitem = listviewitem;
         this.context=context;
     }
@@ -31,14 +34,14 @@ public class Daydataadapter extends RecyclerView.Adapter<Daydataadapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.daydatalist, parent, false);
+                .inflate(R.layout.mtradelayout, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         int safePosition = holder.getAdapterPosition();
-        Daydatalistitem item = listviewitem.get(safePosition);
+        Mtradelistitem2 item = listviewitem.get(safePosition);
 
 
 
@@ -58,7 +61,7 @@ public class Daydataadapter extends RecyclerView.Adapter<Daydataadapter.ViewHold
 
 
 
-        holder.price1.setTextColor(Color.parseColor("#FFA1B4DC"));
+        holder.price1.setTextColor(Color.parseColor("#556B2F"));
         if (listviewitem.size() - 1 == safePosition) {
 
             holder.updown_price.setText("");
