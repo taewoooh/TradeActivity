@@ -11,8 +11,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class BMtradelistitem2 {
 
-    public BMtradelistitem2(String si, int year, int month, int yearmonth, int trade, String per , int hightrade,
-                            int highyear, int highmonth, int rowtrade, int rowyear, int rowmonth, String updatetime) {
+    public BMtradelistitem2(String si, int year, int month, int yearmonth, int trade, String per ,
+                            int bhightrade, int bhighyear, int bhighmonth, int browtrade, int browyear, int browmonth,
+                            int mhightrade, int mhighyear, int mhighmonth, int mrowtrade, int mrowyear, int mrowmonth,String updatetime,String type) {
+
 
         this.si = si;
         this.year = year;
@@ -22,16 +24,24 @@ public class BMtradelistitem2 {
 
         this.per = per;
 
-        this.hightrade = hightrade;
-        this.highyear = highyear;
-        this.highmonth = highmonth;
+        this.bhightrade = bhightrade;
+        this.bhighyear = bhighyear;
+        this.bhighmonth = bhighmonth;
+        this.browtrade = browtrade;
+        this.browyear = browyear;
+        this.browmonth = browmonth;
 
-        this.rowtrade = rowtrade;
-        this.rowyear = rowyear;
-        this.rowmonth = rowmonth;
+        this.mhightrade = mhightrade;
+        this.mhighyear = mhighyear;
+        this.mhighmonth = mhighmonth;
+        this.mrowtrade = mrowtrade;
+        this.mrowyear = mrowyear;
+        this.mrowmonth = mrowmonth;
+
+
+        this.type = type;
         this.updatetime = updatetime;
         this.ym = ym;
-
 
 
     }
@@ -46,13 +56,13 @@ public class BMtradelistitem2 {
 
         this.per = per;
 
-        this.hightrade = hightrade;
-        this.highyear = highyear;
-        this.highmonth = highmonth;
+        this.bhightrade = bhightrade;
+        this.bhighyear = bhighyear;
+        this.bhighmonth = bhighmonth;
 
-        this.rowtrade = rowtrade;
-        this.rowyear = rowyear;
-        this.rowmonth = rowmonth;
+        this.browtrade = browtrade;
+        this.browyear = browyear;
+        this.browmonth = browmonth;
         this.updatetime = updatetime;
         this.ym = ym;
 
@@ -61,7 +71,173 @@ public class BMtradelistitem2 {
     }
 
 
+    public String getSi() {
+        return si;
+    }
 
+    public void setSi(String si) {
+        this.si = si;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getYearmonth() {
+        return yearmonth;
+    }
+
+    public void setYearmonth(int yearmonth) {
+        this.yearmonth = yearmonth;
+    }
+
+    public int getTrade() {
+        return trade;
+    }
+
+    public void setTrade(int trade) {
+        this.trade = trade;
+    }
+
+    public String getUpdatetime() {
+        return updatetime;
+    }
+
+    public void setUpdatetime(String updatetime) {
+        this.updatetime = updatetime;
+    }
+
+    public String getYm() {
+        return ym;
+    }
+
+    public void setYm(String ym) {
+        this.ym = ym;
+    }
+
+    public int getBhightrade() {
+        return bhightrade;
+    }
+
+    public void setBhightrade(int bhightrade) {
+        this.bhightrade = bhightrade;
+    }
+
+    public int getBhighyear() {
+        return bhighyear;
+    }
+
+    public void setBhighyear(int bhighyear) {
+        this.bhighyear = bhighyear;
+    }
+
+    public int getBhighmonth() {
+        return bhighmonth;
+    }
+
+    public void setBhighmonth(int bhighmonth) {
+        this.bhighmonth = bhighmonth;
+    }
+
+    public int getBrowtrade() {
+        return browtrade;
+    }
+
+    public void setBrowtrade(int browtrade) {
+        this.browtrade = browtrade;
+    }
+
+    public int getBrowyear() {
+        return browyear;
+    }
+
+    public void setBrowyear(int browyear) {
+        this.browyear = browyear;
+    }
+
+    public int getBrowmonth() {
+        return browmonth;
+    }
+
+    public void setBrowmonth(int browmonth) {
+        this.browmonth = browmonth;
+    }
+
+    public int getMhightrade() {
+        return mhightrade;
+    }
+
+    public void setMhightrade(int mhightrade) {
+        this.mhightrade = mhightrade;
+    }
+
+    public int getMhighyear() {
+        return mhighyear;
+    }
+
+    public void setMhighyear(int mhighyear) {
+        this.mhighyear = mhighyear;
+    }
+
+    public int getMhighmonth() {
+        return mhighmonth;
+    }
+
+    public void setMhighmonth(int mhighmonth) {
+        this.mhighmonth = mhighmonth;
+    }
+
+    public int getMrowtrade() {
+        return mrowtrade;
+    }
+
+    public void setMrowtrade(int mrowtrade) {
+        this.mrowtrade = mrowtrade;
+    }
+
+    public int getMrowyear() {
+        return mrowyear;
+    }
+
+    public void setMrowyear(int mrowyear) {
+        this.mrowyear = mrowyear;
+    }
+
+    public int getMrowmonth() {
+        return mrowmonth;
+    }
+
+    public void setMrowmonth(int mrowmonth) {
+        this.mrowmonth = mrowmonth;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getPer() {
+        return per;
+    }
+
+    public void setPer(String per) {
+        this.per = per;
+    }
 
     @SerializedName("si")
     @Expose
@@ -107,111 +283,85 @@ public class BMtradelistitem2 {
     public
     String ym;
 
-    public int getHightrade() {
-        return hightrade;
-    }
 
-    public void setHightrade(int hightrade) {
-        this.hightrade = hightrade;
-    }
 
-    public int getHighyear() {
-        return highyear;
-    }
-
-    public void setHighyear(int highyear) {
-        this.highyear = highyear;
-    }
-
-    public int getHighmonth() {
-        return highmonth;
-    }
-
-    public void setHighmonth(int highmonth) {
-        this.highmonth = highmonth;
-    }
-
-    public int getRowtrade() {
-        return rowtrade;
-    }
-
-    public void setRowtrade(int rowtrade) {
-        this.rowtrade = rowtrade;
-    }
-
-    public int getRowyear() {
-        return rowyear;
-    }
-
-    public void setRowyear(int rowyear) {
-        this.rowyear = rowyear;
-    }
-
-    public int getRowmonth() {
-        return rowmonth;
-    }
-
-    public void setRowmonth(int rowmonth) {
-        this.rowmonth = rowmonth;
-    }
-
-    public String getPer() {
-        return per;
-    }
-
-    public void setPer(String per) {
-        this.per = per;
-    }
-    public String getYm() {
-        return ym;
-    }
-
-    public void setYm(String ym) {
-        this.ym = ym;
-    }
-
-    public String getUpdatetime() {
-        return updatetime;
-    }
-
-    public void setUpdatetime(String updatetime) {
-        this.updatetime = updatetime;
-    }
-
-    @SerializedName("hightrade")
+    @SerializedName("bhightrade")
     @Expose
     public
-    int hightrade;
+    int bhightrade;
 
-    @SerializedName("highyear")
+    @SerializedName("bhighyear")
     @Expose
     public
-    int highyear;
+    int bhighyear;
 
-    @SerializedName("highmonth")
+    @SerializedName("bhighmonth")
     @Expose
     public
-    int highmonth;
+    int bhighmonth;
 
 
 
-    @SerializedName("rowtrade")
+    @SerializedName("browtrade")
     @Expose
     public
-    int rowtrade;
+    int browtrade;
 
 
 
 
-    @SerializedName("rowyear")
+    @SerializedName("browyear")
     @Expose
     public
-    int rowyear;
+    int browyear;
 
-    @SerializedName("rowmonth")
+    @SerializedName("browmonth")
     @Expose
     public
-    int rowmonth;
+    int browmonth;
+
+
+
+    @SerializedName("mhightrade")
+    @Expose
+    public
+    int mhightrade;
+
+    @SerializedName("mhighyear")
+    @Expose
+    public
+    int mhighyear;
+
+    @SerializedName("mhighmonth")
+    @Expose
+    public
+    int mhighmonth;
+
+
+
+    @SerializedName("mrowtrade")
+    @Expose
+    public
+    int mrowtrade;
+
+
+
+
+    @SerializedName("mrowyear")
+    @Expose
+    public
+    int mrowyear;
+
+    @SerializedName("mrowmonth")
+    @Expose
+    public
+    int mrowmonth;
+
+
+    @SerializedName("type")
+    @Expose
+    public
+    String type;
 
     @SerializedName("per")
     @Expose
@@ -224,36 +374,6 @@ public class BMtradelistitem2 {
 
 
 
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public int getMonth() {
-        return month;
-    }
-
-    public void setMonth(int month) {
-        this.month = month;
-    }
-
-    public int getYearmonth() {
-        return yearmonth;
-    }
-
-    public void setYearmonth(int yearmonth) {
-        this.yearmonth = yearmonth;
-    }
-    public int getTrade() {
-        return trade;
-    }
-
-    public void setTrade(int trade) {
-        this.trade = trade;
-    }
 
 
 }

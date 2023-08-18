@@ -16,9 +16,10 @@ public interface BMtradegithub2 {
     //@GET("/Information2.php")
     // @GET("/ilbyeol.php")
    // @GET("/DatasettestX.php")
-    @GET("/TradeB.php")
+    @GET("/TradeBM.php")
 
     // JSON Array를 리턴하므로 List<>가 되었다
     //Call<List<ListViewItem>> contributors(@Query("name") String naljja);
-    Call<List<BMtradelistitem2>> contributors(@Query("jiyeok") String name);
+    Call<List<BMtradelistitem2>> contributors(@Query("jiyeok1") String jiyeok1,
+                                              @Query("jiyeok2") String jiyeok2);
 }

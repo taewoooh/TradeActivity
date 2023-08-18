@@ -263,6 +263,11 @@
 
 
     </LinearLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mainmenu">
 
     <com.example.tradeactivity.LockableNestedScrollView
         android:id="@+id/scrollView"
@@ -291,7 +296,7 @@
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
                         android:padding="2dp"
-                        android:text="최고 거래건수"
+                        android:text="역대 최고"
                         android:textColor="@android:color/darker_gray"
                         android:textSize="11dp"
                         android:textStyle="bold">
@@ -306,7 +311,7 @@
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
                         android:padding="2dp"
-                        android:text="현재건수"
+                        android:text="현재"
                         android:textColor="@android:color/darker_gray"
                         android:textSize="11dp"
                         android:textStyle="bold">
@@ -322,7 +327,7 @@
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
                         android:padding="2dp"
-                        android:text="최저 거래건수"
+                        android:text="역대 최저"
                         android:textColor="@android:color/darker_gray"
                         android:textSize="11dp"
                         android:textStyle="bold">
@@ -1462,7 +1467,7 @@
             </RelativeLayout>
         </LinearLayout>
     </com.example.tradeactivity.LockableNestedScrollView>
-
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     <androidx.cardview.widget.CardView
         android:id="@+id/b1"
         android:layout_width="45dp"

@@ -34,7 +34,7 @@ public class RMtradeadapter2 extends RecyclerView.Adapter<RMtradeadapter2.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.btradelayout, parent, false);
+                .inflate(R.layout.rmtradelayout, parent, false);
         return new ViewHolder(view);
     }
 
@@ -47,7 +47,7 @@ public class RMtradeadapter2 extends RecyclerView.Adapter<RMtradeadapter2.ViewHo
 
 
         holder.newdata.setImageResource(0);
-        holder.updown.setImageResource(0);
+
         holder.price2.setText("");
 
 
@@ -60,11 +60,18 @@ public class RMtradeadapter2 extends RecyclerView.Adapter<RMtradeadapter2.ViewHo
 
 
 
+        if (item.getType().equals("월세")){
 
-        holder.price1.setTextColor(Color.parseColor("#FFA1B4DC"));
+            holder.price1.setTextColor(Color.parseColor("#556B2F"));
+        }else {
+
+            holder.price1.setTextColor(Color.parseColor("#FFA07A"));
+        }
+
+
         if (listviewitem.size() - 1 == safePosition) {
 
-            holder.updown_price.setText("");
+
 
 
         } else {
@@ -108,15 +115,12 @@ public class RMtradeadapter2 extends RecyclerView.Adapter<RMtradeadapter2.ViewHo
 
 
 
-                    int c = a - b;
-                    String v = String.valueOf(c);
+                int c = a - b;
+                String v = String.valueOf(c);
 
-                    holder.updown.setImageResource(R.drawable.up);
-                    holder.center.setVisibility(View.INVISIBLE);
-                    holder.updown.setVisibility(View.VISIBLE);
-                    holder.updown_price.setVisibility(View.VISIBLE);
 
-                    holder.updown_price.setText(v);
+
+
 
 
 
@@ -130,15 +134,13 @@ public class RMtradeadapter2 extends RecyclerView.Adapter<RMtradeadapter2.ViewHo
 
 
 
-                    int c = a - b;
-                    String v = String.valueOf(c);
-                    v = new Util().Priceedit(v);
-                    holder.center.setVisibility(View.INVISIBLE);
-                    holder.updown.setVisibility(View.VISIBLE);
-                    holder.updown_price.setVisibility(View.VISIBLE);
+                int c = a - b;
+                String v = String.valueOf(c);
+                v = new Util().Priceedit(v);
 
-                    holder.updown.setImageResource(R.drawable.down);
-                    holder.updown_price.setText(v);
+
+
+
 
 
 
@@ -148,10 +150,10 @@ public class RMtradeadapter2 extends RecyclerView.Adapter<RMtradeadapter2.ViewHo
                 int c = a - b;
                 String v = String.valueOf(c);
                 v = new Util().Priceedit(v);
-                holder.center.setVisibility(View.VISIBLE);
 
 
-                holder.updown_price.setText(v);
+
+
 
             }
 
@@ -172,12 +174,12 @@ public class RMtradeadapter2 extends RecyclerView.Adapter<RMtradeadapter2.ViewHo
 
 
 
-        if (item.getTrade() == item.getHightrade()){
+        if (item.getTrade() == item.getRhightrade() || item.getTrade() == item.getMhightrade()  ) {
 
 
             holder.price2.setTextColor(Color.parseColor("#E91E63"));
             holder.price2.setText("[최고]");
-        }else if (item.getTrade() == item.getRowtrade()){
+        } else if (item.getTrade() == item.getMrowtrade() || item.getTrade() == item.getRrowtrade()) {
             holder.price2.setTextColor(Color.parseColor("#4169E1"));
             holder.price2.setText("[최저]");
 
@@ -186,6 +188,8 @@ public class RMtradeadapter2 extends RecyclerView.Adapter<RMtradeadapter2.ViewHo
 
 
         }
+
+
 
 
 

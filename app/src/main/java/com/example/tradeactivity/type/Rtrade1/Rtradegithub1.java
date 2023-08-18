@@ -19,5 +19,6 @@ public interface Rtradegithub1 {
     @GET("/DatasettestX3.php")
     // JSON Array를 리턴하므로 List<>가 되었다
     //Call<List<ListViewItem>> contributors(@Query("name") String naljja);
-    Call<List<Btradelistitem1>> contributors(@Query("jiyeok") String name);
+    Call<List<Btradelistitem1>> contributors(@Query("jiyeok1") String jiyeok1,
+                                             @Query("jiyeok2") String jiyeok2);
 }

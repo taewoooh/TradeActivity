@@ -132,7 +132,7 @@ public class Mtradeadapter2 extends RecyclerView.Adapter<Mtradeadapter2.ViewHold
 
                     int c = a - b;
                     String v = String.valueOf(c);
-                    v = new Util().Priceedit(v);
+                  
                     holder.center.setVisibility(View.INVISIBLE);
                     holder.updown.setVisibility(View.VISIBLE);
                     holder.updown_price.setVisibility(View.VISIBLE);
