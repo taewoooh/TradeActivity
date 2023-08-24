@@ -4,6 +4,19 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
+    <ImageView
+
+        android:id="@+id/finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:src="@drawable/finish">
+
+    </ImageView>
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"

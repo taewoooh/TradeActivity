@@ -69,7 +69,22 @@
 
             </androidx.cardview.widget.CardView>
 
+            <TextView
+                android:id="@+id/successck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/qu"
+                android:text="1111"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
 
+                android:visibility="gone">
+
+
+            </TextView>
         </RelativeLayout>
 
 
